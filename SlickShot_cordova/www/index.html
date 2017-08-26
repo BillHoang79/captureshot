@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="cordovaApp">
+  <head>
+    <!-- For proper rendering of this page in mobile screen-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- SCROLLS -->
+    <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+    <!-- SPELLS -->
+    <!-- load angular via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <link rel="stylesheet" href="app/app.css" />
+  </head>
+
+  <!-- define angular controller -->
+  <body ng-controller="mainController">
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+      <img id="capturedImage" style="height:100vh;width:100%"  ng-show="showImage"></img>
+        <a class="btn btn-lg newButton" ng-show="showImage" ng-click="newImage()">
+          <span class="glyphicon glyphicon-plus"></span>New
+        </a>
+            <div id="captureImage" style="height:100vh;background-color: #428bca;" ng-hide="showImage" class="jumbotron vertical-center">
+      <button class="btn btn-default btn-lg btn-block verticalCentre" ng-click="captureImage()">Capture</button>
+
+      <!-- angular templating -->
+      <!-- content injection -->
+    </div>
+
+  </body>
+
+</html>
